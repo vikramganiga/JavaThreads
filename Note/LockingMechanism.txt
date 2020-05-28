@@ -1,0 +1,21 @@
+What is difference need to the use of Synchronized key Vs Lock?
+ 
+ Lock interface has methods tryLock(), tryLock(time period), - it helps program the acquire the lock.
+ Lock is explicit locking mechanism. 
+ 
+ 
+ReentrantLock increment an internal count of the number of nested lock requests. 
+Calls to the unlock method decrement the count. The lock is not freed until the lock count reaches the zeros.
+Similar Synchronized keyword. 
+
+Nested lock required for handling the cross-calling methods.  It is possible for a method of one class to call methods of 
+of another class, which in turn may call method of the origin class. If java did not support nested locks and the methods 
+of the both classes were synchronized we could deadlock the program.
+
+ReentrantLock gives count of nested call, number of acquisitions that the current thread has made on lock.
+
+
+
+ 
+ 
+ 
