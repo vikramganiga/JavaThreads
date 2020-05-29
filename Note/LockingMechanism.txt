@@ -13,9 +13,3 @@ of another class, which in turn may call method of the origin class. If java did
 of the both classes were synchronized we could deadlock the program.
 
 ReentrantLock gives count of nested call, number of acquisitions that the current thread has made on lock.
-
-
-
- 
- 
- 
